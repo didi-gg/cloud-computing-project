@@ -12,7 +12,7 @@ Margen Operacional: 10%
 Número de Empleados: 100
 Palabras clave: Grandes volúmenes, genoma, biotecnología.
 
-# Entregables Comunes
+# Entregables Comunes blablabla
 Entregable 1:
 Informe detallado de la arquitectura propuesta, incluyendo diagramas de arquitectura, tipos de instancias EC2, elección de bases de datos RDS, uso de servicios adicionales de AWS, costos estimados y pasos detallados para el despliegue. Cada equipo debe justificar sus decisiones en función de los datos proporcionados y simular los modelos de machine learning o procesos de optimización.
 #Entregable 2:
