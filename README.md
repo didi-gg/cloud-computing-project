@@ -1,9 +1,9 @@
 # Cloud Computing Project - Grupo 2. Caso de Uso: Biotech Explorer Corp.
 
-Andrés Felipe Restrepo Melo
-Angie Catherine Ovalle Molina
-Diana Marcela Gómez Gamez
-Liliana del Rosario Arciniegas Mayag
+Andrés Felipe Restrepo Melo  
+Angie Catherine Ovalle Molina  
+Diana Marcela Gómez Gamez  
+Liliana del Rosario Arciniegas Mayag  
 
 ## Descripción
 
