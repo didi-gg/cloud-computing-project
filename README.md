@@ -12,10 +12,10 @@ Esta startup trabaja con análisis de datos genómicos a gran escala. Requiere u
 **Solución Propuesta:**
 El equipo desarrollará una solución de análisis de datos que use **EC2** para el procesamiento intensivo y una combinación de **RDS** y **S3** para almacenar grandes volúmenes de datos genómicos. Los algoritmos de análisis estarán contenerizados en **Docker** y se desarrollarán en **Python**. Se sugiere el uso de **AWS Batch** para gestionar cargas de trabajo por lotes en la secuenciación genómica, y **EFS** para el almacenamiento compartido.
 
-**Ingresos Operacionales:** US$ 5 millones
-**Margen Operacional:** 10%
-**Número de Empleados:** 100
-**Palabras clave:** Grandes volúmenes, genoma, biotecnología.
+**Ingresos Operacionales:** US$ 5 millones  
+**Margen Operacional:** 10%  
+**Número de Empleados:** 100  
+**Palabras clave:** Grandes volúmenes, genoma, biotecnología  
 
 ## Entregables
 ### Entregable 1: 
