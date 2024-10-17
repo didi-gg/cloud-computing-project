@@ -1,0 +1,3 @@
+# Ejecutar main.py cada hora
+0 * * * * root echo "Cron job ejecutado" >> /var/log/cron.log && python /app/main.py && docker exec ml_training_container python /app/main.py >> /var/log/cron.log 2>&1
+

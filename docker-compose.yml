@@ -1,0 +1,48 @@
+services:
+  data_processing:
+    build: ./data_processing
+    container_name: data_processing_container
+    volumes:
+      - ./data_processing:/app
+    networks:
+      - biotech-network
+    depends_on:
+      - postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+  ml_training:
+    build: ./ml_training
+    container_name: ml_training_container
+    volumes:
+      - ./ml_training:/app
+    networks:
+      - biotech-network
+    depends_on:
+      - postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+  postgres:
+    image: postgres:13
+    container_name: postgres_container
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - biotech-network
+    ports:
+      - "5432:5432"
+
+networks:
+  biotech-network:
+
+volumes:
+  postgres_data:
