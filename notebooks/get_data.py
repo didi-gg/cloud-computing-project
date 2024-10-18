@@ -32,7 +32,7 @@ def getApiData(endpoint):
 # Función para exportar el DataFrame a un archivo CSV
 def exportData(df):   
     filename = f"ensembl_ENSG00000139618_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
-    df.to_csv(filename, index=False)
+    df.to_csv("temp/"+filename, index=False)
     return filename
 
 # Función para subir el archivo a S3
@@ -45,7 +45,7 @@ def upload_to_s3(file_name):
 
     
     try:
-        s3.upload_file(file_name, S3_BUCKET_NAME, file_name)
+        s3.upload_file("temp/"+file_name, S3_BUCKET_NAME, "input-data/"+file_name)
         print(f"Archivo {file_name} subido exitosamente a S3.")
     except FileNotFoundError:
         print("El archivo no fue encontrado.")
