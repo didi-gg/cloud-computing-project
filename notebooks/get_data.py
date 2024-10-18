@@ -12,8 +12,8 @@ load_dotenv()
 
 AWS_ACCESS_KEY_ID=os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY=os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_SESSION_TOKEN=os.getenv("AWS_SESSION_TOKEN")
 S3_BUCKET_NAME=os.getenv("S3_BUCKET_NAME")
-
 API_SERVER=os.getenv("API_SERVER")
 ENDPOINT_ENSG00000139618=os.getenv("ENDPOINT_ENSG00000139618")
 
@@ -38,10 +38,11 @@ def exportData(df):
 # Función para subir el archivo a S3
 def upload_to_s3(file_name):
     s3 = boto3.client(
-        's3',
-        aws_access_key_id=AWS_ACCESS_KEY_ID,
-        aws_secret_access_key=AWS_SECRET_ACCESS_KEY
-    )
+    's3', 
+    aws_access_key_id=AWS_ACCESS_KEY_ID,
+    aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
+    aws_session_token=AWS_SESSION_TOKEN,)
+
     
     try:
         s3.upload_file(file_name, S3_BUCKET_NAME, file_name)
