@@ -70,6 +70,7 @@ Ejecutar el comando:
 ```
 scp -i "key-pair.pem" -r /ruta/proyecto ubuntu@your-public-ip:/home/ubuntu/
 ```
+![Image no encontrada](6.png)
 
 ##  Construir y Ejecutar las Imágenes Docker en EC2
 
@@ -79,14 +80,13 @@ Ejecutar el comando:
 ```
 cd /home/ubuntu/proyecto
 ```
-
 ### 2. Construir las Imágenes Docker
 Ejecutar el comando:
 
 ```
 docker-compose build
 ```
-
+![Image no encontrada](7.png)
 ### 3. Ejecutar los Contenedores
 Ejecutar el comando:
 
@@ -100,3 +100,4 @@ Ejecutar el comando:
 ```
 docker ps
 ```
+![Image no encontrada](8.png)
